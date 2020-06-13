@@ -1,0 +1,23 @@
+<div class="container-fluid mt-3" *ngIf="beer">
+    <div class="row pt-5">
+      <div class="col-xs-12 col-sm-12 col-md-6">
+        <img src="{{ beer.ImageUrl }}" class="img-fluid" />
+        <figcaption class="figure-caption">
+          Added: {{ beer.date | date: "fullDate" }}
+          {{ beer.date | date: "shortTime" }}
+        </figcaption>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-6">
+        <h5 class="card-title list-group-item mb-0">
+          {{ beer.brand }}
+        </h5>
+        <div class="list-group-item">Color: {{ beer.color }}</div>
+        <div class="list-group-item">Bitterness: {{ beer.bitterness }}</div>
+        <div class="list-group-item">Year of creation: {{ beer.year }}</div>
+        <div class="mt-2">
+          <button class="btn btn-danger" (click)="deleteBeer()">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,21 @@
+<div class="card mr-2 w-100">
+    <div class="img-container">
+      <img
+        class="card-img-top img-fluid"
+        src="{{ Beer.ImageUrl }}"
+        alt="Card image cap"
+      />
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{ Beer.brand }}</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Color: {{ Beer.color }}</li>
+      <li class="list-group-item">Bitterness: {{ Beer.bitterness }}</li>
+      <li class="list-group-item">Year of creation: {{ Beer.year }}</li>
+    </ul>
+    <div class="card-body">
+      <a routerLink="/Details/{{ Beer.id }}" class="card-link">Details</a>
+    </div>
+  </div>
+  

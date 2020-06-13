@@ -1,0 +1,82 @@
+.parent {
+    width: 100%;
+    height: 25vw;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  
+    @media screen and (max-width: 425px) {
+      height: 45vw;
+    }
+  }
+  
+  .child {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+  
+    a {
+      display: none;
+      font-size: 35px;
+      color: #ffffff !important;
+      font-family: sans-serif;
+      text-align: center;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      height: 50px;
+      cursor: pointer;
+    }
+  
+    :before {
+      content: "";
+      display: none;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(52, 73, 94, 0.75);
+    }
+  }
+  
+  .bg-one {
+    background-image: url("../../assets/brewery.jpg");
+  }
+  
+  .parent:hover .child,
+  .parent:focus .child {
+    -ms-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  
+  .parent:hover .child:before,
+  .parent:focus .child:before {
+    display: block;
+  }
+  
+  .parent:hover a,
+  .parent:focus a {
+    display: block;
+  }
+  
+  .beerimg {
+    :hover,
+    :focus {
+      transform: scale(1.3);
+      transition: transform 0.5s;
+    }
+  }
+  

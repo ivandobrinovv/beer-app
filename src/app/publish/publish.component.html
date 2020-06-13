@@ -1,0 +1,109 @@
+<div class="container-fluid mt-5">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 mt-3">
+        <p class="sm">Use the form below to add publish a new beer.</p>
+        <form [formGroup]="rForm" (ngSubmit)="postBeer()">
+          <div class="form-group mt-3">
+            <label for="Brand">Brand</label>
+            <select
+              name="brand"
+              formControlName="brand"
+              class="form-control"
+            >
+              <option [value]="beer.brand" *ngFor="let beer of beers">{{
+                beer.brand
+              }}</option>
+            </select>
+            <small
+              class="form-text text-muted text-red"
+              *ngIf="
+                !rForm.controls['brand'].valid && rForm.controls['brand'].touched
+              "
+              >* You must select a brand.</small
+            >
+          </div>
+          <div class="form-group mt-3">
+            <label for="Color">Color</label>
+            <select class="form-control" formControlName="color">
+                <option value="2">2 Degrees Lovibond</option>
+                <option value="3">3 Degrees Lovibond</option>
+                <option value="4">4 Degrees Lovibond</option>
+                <option value="6">6 Degrees Lovibond</option>
+                <option value="8">8 Degrees Lovibond</option>
+                <option value="10">10 Degrees Lovibond</option>
+                <option value="13">13 Degrees Lovibond</option>
+                <option value="17">17 Degrees Lovibond</option>
+                <option value="20">20 Degrees Lovibond</option>
+                <option value="24">24 Degrees Lovibond</option>
+                <option value="29">29 Degrees Lovibond</option>
+                <option value="35">35 Degrees Lovibond</option>
+                <option value="40">40+ Degrees Lovibond</option>
+            </select>
+            <small
+              class="form-text text-muted text-red"
+              *ngIf="
+                !rForm.controls['color'].valid &&
+                rForm.controls['color'].touched
+              "
+              >You must select color.</small
+            >
+          </div>
+          <div class="form-group mt-3">
+            <label for="Bitterness">Bitterness</label
+            ><select class="form-control" formControlName="bitterness">
+                <option value="Lambic">Lambic</option>
+                <option value="Wheat-beer">Wheat beer</option>
+                <option value="American-lager">American lager</option>
+                <option value="Kolsch">Kolsch</option>
+                <option value="Pilsner">Pilsner</option>
+                <option value="Porter">Porter</option>
+                <option value="Bitter">Bitter</option>
+                <option value="Pale-ale">Pale ale</option>
+                <option value="Stout">Stout</option>
+                <option value="Barleywine">Barleywine</option>
+                <option value="India-pale-ale">India pale ale</option>
+            </select>
+            <small
+              class="form-text text-muted text-red"
+              *ngIf="
+                !rForm.controls['bitterness'].valid &&
+                rForm.controls['bitterness'].touched
+              "
+              >You must select bitterness level.</small
+            >
+          </div>
+          <div class="form-group mt-3">
+            <label for="Year">Year</label>
+            <input class="form-control" type="text" formControlName="year" />
+            <small
+              class="form-text text-muted text-red"
+              *ngIf="
+                !rForm.controls['year'].valid && rForm.controls['year'].touched
+              "
+              >Please enter year of creation.</small
+            >
+          </div>
+          <div class="form-group mt-3">
+            <label for="ImageUrl">ImageUrl</label>
+            <input class="form-control" type="text" formControlName="ImageUrl" />
+            <small
+              class="form-text text-muted text-red"
+              *ngIf="
+                !rForm.controls['ImageUrl'].valid &&
+                rForm.controls['ImageUrl'].touched
+              "
+            >
+              Please uploade an image of the beer bottle.</small
+            >
+          </div>
+          <input
+            type="submit"
+            class="btn btn-primary mt-3"
+            value="Submit Form"
+            [disabled]="!rForm.valid"
+          />
+        </form>
+      </div>
+    </div>
+  </div>
+  

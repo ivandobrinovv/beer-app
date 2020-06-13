@@ -1,0 +1,75 @@
+{
+  "beers": [
+    {
+      "brand": "Madonna",
+      "color": "35",
+      "bitterness": "Barleywine",
+      "year": "2010",
+      "ImageUrl": "https://www.ebag.bg/en/product/572749/images/0/800",
+      "date": 1592005839607,
+      "id": 1
+    },
+    {
+      "brand": "Ariana",
+      "color": "6",
+      "bitterness": "Pilsner",
+      "year": "2000",
+      "ImageUrl": "https://bulgarianfood.eu/wp-content/uploads/2015/01/Ariana_can_eborsa-1.jpg",
+      "date": 1592006300753,
+      "id": 2
+    },
+    {
+      "brand": "Bql Shtark",
+      "color": "8",
+      "bitterness": "Pilsner",
+      "year": "2010",
+      "ImageUrl": "https://abordage.bg/wp-content/uploads/2017/03/beers_0001_white-stork-classic.jpg",
+      "date": 1592006380770,
+      "id": 3
+    },
+    {
+      "brand": "Kozel",
+      "color": "29",
+      "bitterness": "Barleywine",
+      "year": "2010",
+      "ImageUrl": "https://cdn.nokovandson.com/crop/2462/1920/1920/Hn/Hn1tgqMC0p.jpg",
+      "date": 1592006641894,
+      "id": 4
+    },
+    {
+      "brand": "Corona",
+      "color": "3",
+      "bitterness": "American-lager",
+      "year": "2008",
+      "ImageUrl": "https://cdn.shopify.com/s/files/1/0147/4481/3632/products/corona.png?v=1546609429",
+      "date": 1592006663986,
+      "id": 5
+    }
+  ],
+  "allbeers": [
+    {
+      "brand": "Bql Shtark"
+    },
+    {
+      "brand": "Ariana"
+    },
+    {
+      "brand": "Staropramen"
+    },
+    {
+      "brand": "Starobrno"
+    },
+    {
+      "brand": "Corona"
+    },
+    {
+      "brand": "Kozel"
+    },
+    {
+      "brand": "Madonna"
+    },
+    {
+      "brand": "Stolichno"
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+<div class="container-fluid mt-5">
+    <div class="row">
+      <form class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+        <div class="form-group mt-3 ">
+          <label for="exampleInputEmail1">Brand</label>
+          <select
+            name="selectedBrand"
+            [(ngModel)]="selectedBrand"
+            #brandAfterSelectionState="ngModel"
+            class="form-control"
+            required
+          >
+            <option [value]="beer.brand" *ngFor="let beer of receivedAllBeers">{{
+              beer.brand
+            }}</option>
+          </select>
+          <small id="emailHelp" class="form-text text-muted"
+            >* Selecting a beer brand is required</small
+          >
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Color</label>
+          <select
+            name="colors"
+            [(ngModel)]="selectedColor"
+            class="form-control"
+          >
+            <option value="">All colors</option>
+            <option value="2">2 Degrees Lovibond</option>
+            <option value="3">3 Degrees Lovibond</option>
+            <option value="4">4 Degrees Lovibond</option>
+            <option value="6">6 Degrees Lovibond</option>
+            <option value="8">8 Degrees Lovibond</option>
+            <option value="10">10 Degrees Lovibond</option>
+            <option value="13">13 Degrees Lovibond</option>
+            <option value="17">17 Degrees Lovibond</option>
+            <option value="20">20 Degrees Lovibond</option>
+            <option value="24">24 Degrees Lovibond</option>
+            <option value="29">29 Degrees Lovibond</option>
+            <option value="35">35 Degrees Lovibond</option>
+            <option value="40">40+ Degrees Lovibond</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Bitterness</label>
+          <select
+            name="bitterness"
+            [(ngModel)]="selectedBitterness"
+            class="form-control"
+          >
+            <option value="">All types</option>
+            <option value="Lambic">Lambic</option>
+            <option value="Wheat-beer">Wheat beer</option>
+            <option value="American-lager">American lager</option>
+            <option value="Kolsch">Kolsch</option>
+            <option value="Pilsner">Pilsner</option>
+            <option value="Porter">Porter</option>
+            <option value="Bitter">Bitter</option>
+            <option value="Pale-ale">Pale ale</option>
+            <option value="Stout">Stout</option>
+            <option value="Barleywine">Barleywine</option>
+            <option value="India-pale-ale">India pale ale</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Year</label>
+          <input
+            type="text"
+            class="txt"
+            name="item"
+            [(ngModel)]="selectedYear"
+            class="form-control"
+            placeholder="Enter year"
+          />
+        </div>
+        <button
+          [disabled]="brandAfterSelectionState.invalid"
+          type="button"
+          (click)="getSearchedBeers()"
+          class="btn btn-primary"
+        >
+          Search
+        </button>
+      </form>
+  
+      <div
+        *ngIf="noBeersFound"
+        class="col-xs-12 col-sm-6 col-md-6 col-lg-8 col-xl-9 mt-4"
+      >
+        <div class="alert alert-info" role="alert">
+          No beers found related to your search.
+        </div>
+      </div>
+  
+      <app-beer-card
+        *ngFor="let Beer of receivedBeers"
+        [Beer]="Beer"
+        class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 mt-3"
+      >
+      </app-beer-card>
+    </div>
+  </div>
+  
